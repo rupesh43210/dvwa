@@ -22,12 +22,7 @@ cp /var/www/html/config/config.inc.php.dist /var/www/html/config/config.inc.php
 clear
 
 
-echo "////////////////////Its time to setup database///////////////////////////'
-
-
-
-
-
+echo "////////////////////Its time to setup database///////////////////////////"
 
 chmod +x ./db.sh
 
