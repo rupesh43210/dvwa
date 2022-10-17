@@ -1,6 +1,6 @@
 #!/bin/bash
 mkdir /dvwa
-mv -r dvwa-deploy-on-host/* /dvwa
+cp /home/ubuntu/dvwa-deploy-on-host/* /dvwa/
 cd /dvwa
 apt update
 apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
