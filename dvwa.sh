@@ -16,7 +16,7 @@ chown -R 777 DVWA
 
 mv ./DVWA/* ./
 
-cp /var/www/html/DVWA/config/config.inc.php.dist /var/www/html/DVWA/config/config.inc.php
+cp /var/www/html/config/config.inc.php.dist /var/www/html/config/config.inc.php
 
 
 clear
