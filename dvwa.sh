@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME
 mkdir /dvwa
-cp \$HOME/dvwa*/* /dvwa/
+cp \$HOME/dvwa*/* /dvwa
 cd /dvwa
 apt update
 apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
