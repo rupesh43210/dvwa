@@ -24,6 +24,6 @@ clear
 
 echo "////////////////////Its time to setup database///////////////////////////"
 
-chmod +x ./db.sh
+chmod +x db.sh
 
 ./db.sh
