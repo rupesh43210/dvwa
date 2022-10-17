@@ -2,17 +2,17 @@
 
 # If /root/.my.cnf exists then it won't ask for root password
 if [ -f /root/.my.cnf ]; then
-	echo "Enter database name!"
+	echo "Enter database name!- to create new database"
 	read dbname
     
 	echo "Creating new MySQL database..."
 	mysql -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
 	echo "Database successfully created!"
 	
-	echo "Enter database user!"
+	echo "Enter database user!-create new user"
 	read username
     
-	echo "Enter the PASSWORD for database user!"
+	echo "Enter the PASSWORD for database user!- password of new user"
 	echo "Note: password will be hidden when typing"
 	read -s userpass
     
