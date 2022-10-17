@@ -1,14 +1,10 @@
 
 #!/bin/bash
-for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
-do
-   echo "ENSURE YOU ARE SUDO if not pleaee press cntrl+C and do sudo su within 20-$i seconds"
-   
-   sleep 1
-done
 
-sleep 2
-
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
 
 cd $HOME
 mkdir /dvwa
