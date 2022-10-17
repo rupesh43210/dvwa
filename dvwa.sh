@@ -1,4 +1,15 @@
+
 #!/bin/bash
+for i in 1 2 3 4 5
+do
+   echo "ENSURE YOU ARE SUDO if not pleaee press cntrl+C and do sudo su within 30 seconds $i times"
+   
+   sleep 2
+done
+
+sleep 10
+
+
 cd $HOME
 mkdir /dvwa
 cp $HOME/dvwa*/* /dvwa
