@@ -24,7 +24,7 @@ chown -R 777 DVWA
 mv ./DVWA/* ./
 cp /var/www/html/config/config.inc.php.dist /var/www/html/config/config.inc.php
 clear
-echo "////////////////////Its time to setup database///////////////////////////"
+echo "////////////////////Settingup database///////////////////////////"
 
 cd /dvwa
 chmod +x /dvwa/db.sh
@@ -34,7 +34,14 @@ chmod +x /dvwa/db.sh
 echo "#################################################################Final Steps#############################################################"
 extaddr=$(curl -s ifconfig.me)
 
-echo "set up dvwa by vistiting host at public address  http://"$extaddr"/setup.php or http://localhost/setup.php"
+if [ -z "$extaddr" ]
+then
+      echo "set up dvwa by vistiting host at public address  http://localhost/setup.php
+else
+      eecho "set up dvwa by vistiting host at public address  http://"$extaddr"/setup.php
+fi
+
+#echo "set up dvwa by vistiting host at public address  http://"$extaddr"/setup.php or http://localhost/setup.php"
 
 echo "#################################################################Final Steps#############################################################"
 
