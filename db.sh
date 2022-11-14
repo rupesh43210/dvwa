@@ -3,18 +3,21 @@
 # If /root/.my.cnf exists then it won't ask for root password
 if [ -f /root/.my.cnf ]; then
 	echo "Enter database name!- to create new database"
-	read dbname
+	#read dbname
+	dbname=dvwa
     
 	echo "Creating new MySQL database..."
 	mysql -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
 	echo "Database successfully created!"
 	
-	echo "Enter database user!-create new user"
-	read username
+	#echo "Enter database user!-create new user"
+	#read username
+	username=dvwa
     
-	echo "Enter the PASSWORD for database user!- password of new user"
-	echo "Note: password will be hidden when typing"
-	read -s userpass
+	#echo "Enter the PASSWORD for database user!- password of new user"
+	#echo "Note: password will be hidden when typing"
+	#read -s userpass
+	userpass=p@ssw0rd
     
 	echo "Creating new user..."
 	mysql -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
@@ -28,23 +31,27 @@ if [ -f /root/.my.cnf ]; then
 	
 # If /root/.my.cnf doesn't exist then it'll ask for root password	
 else
-	echo "Please enter root user MySQL password!"
-	echo "Note: password will be hidden when typing"
-	read -s rootpasswd
+	#echo "Please enter root user MySQL password!"
+	#echo "Note: password will be hidden when typing"
+	#read -s rootpasswd
+	rootpasswd=ubuntu
     
-	echo "Enter database name!"
-	read dbname
+	#echo "Enter database name!"
+	#read dbname
+	dbname=dvwa
     
 	echo "Creating new MySQL database..."
 	mysql -uroot -p${rootpasswd} -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
 	echo "Database successfully created!"
     
-	echo "Enter database user!"
-	read username
+	#echo "Enter database user!"
+	#read username
+	username=dvwa
     
-	echo "Enter the PASSWORD for database user!"
-	echo "Note: password will be hidden when typing"
-	read -s userpass
+	#echo "Enter the PASSWORD for database user!"
+	#echo "Note: password will be hidden when typing"
+	#read -s userpass
+	userpass=p@ssw0rd
     
 	echo "Creating new user..."
 	mysql -uroot -p${rootpasswd} -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
