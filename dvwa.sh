@@ -34,7 +34,7 @@ chmod +x /dvwa/db.sh
 echo "Final Steps"
 extaddr=$(curl -s ifconfig.me)
 
-echo "set up dvwa by vistiting the your reachable public address  http://"$extaddr"/setup.php"
+echo "set up dvwa by vistiting the your reachable public address  http://"$extaddr"/setup.php or http://localhost/setup.php"
 
 
 
