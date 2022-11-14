@@ -29,3 +29,12 @@ echo "////////////////////Its time to setup database///////////////////////////"
 cd /dvwa
 chmod +x /dvwa/db.sh
 /dvwa/db.sh
+
+
+echo "Final Steps"
+extaddr=$(curl -s ifconfig.me)
+
+echo "set up dvwa by vistiting the your reachable public address  http://"$extaddr"/setup.php"
+
+
+
