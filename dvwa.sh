@@ -32,6 +32,7 @@ chmod +x /dvwa/db.sh
 
 
 echo "#################################################################Final Steps#############################################################"
+echo -e "\n"
 extaddr=$(curl -s ifconfig.me)
 
 if [ -z "$extaddr" ]
@@ -42,7 +43,7 @@ else
 fi
 
 #echo "set up dvwa by vistiting host at public address  http://"$extaddr"/setup.php or http://localhost/setup.php"
-
+echo -e "\n"
 echo "#################################################################Final Steps#############################################################"
 
 
