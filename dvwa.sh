@@ -8,8 +8,11 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 cd $HOME
+mkdir $HOME/dvwa
+cp -r /home/ubuntu/dvwa*/* $HOME/dvwa/
 mkdir /dvwa
 cp $HOME/dvwa*/* /dvwa
+
 cd /dvwa
 apt update
 apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
