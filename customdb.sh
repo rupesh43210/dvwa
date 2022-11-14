@@ -1,4 +1,4 @@
-#!/bin/bash
+#$#!/bin/bash
 
 # If /root/.my.cnf exists then it won't ask for root password
 if [ -f /root/.my.cnf ]; then
